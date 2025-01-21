@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/profile.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+
+<!--admin -->
+
+<header class="header" data-header>
+<div class="header-top">
+  <div class="container">
+
+    <a href="#" class="logo">
+      <img src="./assets/images/logo-light.png" alt="Homeverse logo">
+    </a>
+
+    <nav class="navbar" data-navbar>
+
+      
+      <div class="navbar-bottom">
+        <ul class="navbar-list">
+
+          <li><a href="../homeverse.html" class="navbar-link" data-nav-link>Home</a></li>
+          <li><button onclick="toggleAside('dashboard')" class="navbar-link" data-nav-link>Dashboard</button></li>
+          <li><button onclick="toggleAside('users')" class="navbar-link" data-nav-link>Users</button></li>
+          <li><button onclick="toggleAside('edit-properties')" class="navbar-link" data-nav-link>Edit Properties</button></li>
+          <li><a href="../AddHome.html"><button class="navbar-link" data-nav-link>Add Property</button></a></li>
+          <li><button onclick="toggleAside('edit-properties-features')" class="navbar-link" data-nav-link>Control panel</li>
+          <li><button onclick="toggleAside('profile')" class="navbar-link" data-nav-link>Profile</button></li>
+          <li><button onclick="toggleAside('password-section')"class="navbar-link" data-nav-link>Change Password</button></li>
+          <li><a href="../homeverse.html"><button class="navbar-link" data-nav-link>Log out</button></a></li>
+          <div class="user">
+            <img src="assets/images/author.jpg" alt="admin-image">
+        </div>
+        </ul>
+      </div>
+
+    </nav>
+
+    
+
+  </div>
+</div>
+
+<header class="aside-header">
+      <h1>Admin Page</h1>
+    </header>
+
+    <aside id="dashboard" class="Profile">
+      
+      <div class="dash-content">
+        <div class="cardBox">
+          <div class="card">
+              <div>
+                  <div class="numbers">1,504</div>
+                  <div class="cardName">Daily Views</div>
+              </div>
+
+              <div class="iconBx">
+                  <ion-icon name="eye-outline"></ion-icon>
+              </div>
+          </div>
+
+          <div class="card">
+              <div>
+                  <div class="numbers">80</div>
+                  <div class="cardName">Sales</div>
+              </div>
+
+              <div class="iconBx">
+                  <ion-icon name="cart-outline"></ion-icon>
+              </div>
+          </div>
+
+          <div class="card">
+              <div>
+                  <div class="numbers">284</div>
+                  <div class="cardName">Comments</div>
+              </div>
+
+              <div class="iconBx">
+                  <ion-icon name="chatbubbles-outline"></ion-icon>
+              </div>
+          </div>
+
+          <div class="card">
+              <div>
+                  <div class="numbers">$7,842</div>
+                  <div class="cardName">Earning</div>
+              </div>
+
+              <div class="iconBx">
+                  <ion-icon name="cash-outline"></ion-icon>
+              </div>
+          </div>
+      </div>
+      <div class="details">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Recently sold properties</h2>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>Type</td>
+                        <td>Price</td>
+                        <td>Payment</td>
+                        <td>Status</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>House</td>
+                        <td>$1200</td>
+                        <td class="paid">Paid</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Bulk Rent Unit</td>
+                        <td>$110</td>
+                        <td>Due</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Townhouse</td>
+                        <td>$1200</td>
+                        <td>Paid</td>
+                        <td><span class="status return">Return</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>iVilla</td>
+                        <td>$620</td>
+                        <td>Due</td>
+                        <td><span class="status inProgress">In Progress</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dublex</td>
+                        <td>$1200</td>
+                        <td>Paid</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Chalet</td>
+                        <td>$110</td>
+                        <td>Due</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Villa</td>
+                        <td>$1200</td>
+                        <td>Paid</td>
+                        <td><span class="status return">Return</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Apartment</td>
+                        <td>$620</td>
+                        <td>Due</td>
+                        <td><span class="status inProgress">In Progress</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--recent users-->
+        <div class="recentCustomers">
+            <div class="cardHeader">
+                <h2>Recent Users</h2>
+            </div>
+
+            <table>
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="assets/images/user1.jpg" alt=""></div>
+                    </td>
+                    <td>
+                        <h4>David</h4>
+                    </td>
+                    <td>
+                      <h4>May 1, 2023 </h4>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="assets/images/user2.jpg" alt=""></div>
+                    </td>
+                    <td>
+                        <h4>Amit </h4>
+                    </td>
+                    <td>
+                      <h4>May 1, 2023 </h4>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="assets/images/user1.jpg" alt=""></div>
+                    </td>
+                    <td>
+                        <h4>David </h4>
+                    </td>
+                    <td>
+                      <h4>May 1, 2023 </h4>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="assets/images/user2.jpg" alt=""></div>
+                    </td>
+                    <td>
+                        <h4>Amit </h4>
+                    </td>
+                    <td>
+                      <h4>May 1, 2023 </h4>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="assets/images/user1.jpg" alt=""></div>
+                    </td>
+                    <td>
+                        <h4>David </h4>
+                    </td>
+                    <td>
+                      <h4>May 1, 2023 </h4>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="assets/images/user2.jpg" alt=""></div>
+                    </td>
+                    <td>
+                        <h4>Amit</h4>
+                    </td>
+                    <td>
+                      <h4>May 1, 2023 </h4>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="assets/images/user1.jpg" alt=""></div>
+                    </td>
+                    <td>
+                        <h4>David </h4>
+                    </td>
+                    <td>
+                      <h4>May 1, 2023 </h4>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="60px">
+                        <div class="imgBx"><img src="assets/images/user2.jpg" alt=""></div>
+                    </td>
+                    <td>
+                        <h4>Amit </h4>
+                    </td>
+                    <td>
+                      <h4>May 1, 2023 </h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+      </div>
+    </aside>
+
+    <!-- users -->
+    <aside id="users" class="Profile">
+      <div class="users">
+      
+      <ul id="user-list" class="change-prof-info">
+        <h1>List of Users</h1>
+        <li>
+          <img src="assets/images/user2.jpg" alt="User 1">
+          <span class="username">John Smith</span>
+          <span class="useremail">john.smith@example.com</span>
+          
+          <button class="delete-user-btn">Delete</button>
+        </li>
+        <li>
+          <img src="assets/images/user1.jpg" alt="User 1">
+          <span class="username">Jane Doe</span>
+          <span class="useremail">jane.doe@example.com</span>
+          
+          <button class="delete-user-btn">Delete</button>
+        </li>
+        <li>
+          <img src="assets/images/user2.jpg" alt="User 1">
+          <span class="username">Bob Wilson</span>
+          <span class="useremail">bob.wilson@example.com</span>
+          
+          <button class="delete-user-btn">Delete</button>
+        </li>
+      </ul>
+             
+      </div>
+      <div class="add-delete-user">
+      <div class="change-prof-info" id="add-user">
+        <h2>Add User</h2>
+        <form id="add-user-form">
+          <div class="form-group">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <button type="submit">Add User</button>
+        </form>
+      </div>
+      <div class="change-prof-info" id="del-user">
+        <h2>Delete User</h2>
+        <form id="add-user-form">
+          <div class="form-group">
+            
+            <input type="text" id="username" name="username" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
+          </div>
+          
+          <button type="submit">Delete User</button>
+        </form>
+      </div>
+    </div>
+  </aside>
+
+    <!-- edit properties -->
+    <aside id="edit-properties" class="Profile">
+      <div class="search">
+        <label>
+            <input type="text" placeholder="Search here">
+            <ion-icon name="search-outline"></ion-icon>
+        </label>
+      </div>
+      
+      <div class="my-prop-main">
+        <span class="my-prop-span"><h2>Edit Properties</h2></span>
+        <span class="property-date"><h4>Date</h4></span>
+        <span><h4>Edit</h4></span>
+        <span><h4>Delete</h4></span>
+        <div class="my-prop">
+          
+          <div class="property-image">
+            <img src="./assets/images/property-1.jpg" alt="property image">
+          </div>
+          <div class="property-details">
+            <h3>Property-name</h3><hr>
+            <h5>Address</h5><hr>
+            <h5>Phone</h5><hr>
+          </div>
+          <div class="date-act-del">
+            <div id="date-added" class="prop-date-details"></div>
+            <button onclick="toggleAside('edit')">Edit</button>
+            <div class="delete-button">
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+        </div>
+    <hr>
+    <div class="my-prop">
+          
+      <div class="property-image">
+        <img src="./assets/images/property-2.jpg" alt="property image">
+      </div>
+      <div class="property-details">
+        <h3>Property-name</h3><hr>
+        <h5>Address</h5><hr>
+        <h5>Phone</h5><hr>
+      </div>
+      <div class="date-act-del">
+        <div id="date-added1" class="prop-date-details"></div>
+        <button onclick="toggleAside('edit')">Edit</button>
+        <div class="delete-button">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+    </aside>
+    <!-- edit property -->
+    <aside id="edit" class="Profile">
+      <section class="home" id="home">
+        
+        <form action="StoreProperty" method="post" class="add-form" enctype="multipart/form-data">
+          
+            <h3>Edit Property</h3> 
+    
+
+    
+            <div class="inputBox">
+                <select name="" id="">
+                    <option value="" disabled hidden selected>Sell or Rent 
+                    </option>
+                    <option >For Rent</option>
+                     <option >For Sell</option>
+                </select>
+                    
+        <select name="PType" id="type">
+         <option value="" disabled hidden selected>Type 
+                    </option>
+            @foreach ($PropertyType as $type)
+            <option name ="Type" value="{{$type->Type_ID}}">{{$type->Type_name}}</option>
+        @endforeach
+        </select>
+                <input min="1" type="number" name="Price" placeholder="Price" id="">
+                <input min="1" type="number" name="Bedrooms" placeholder="Bedrooms" id="">
+
+                <input min="1" type="number" name="Bathrooms" placeholder="Bathrooms" id="">
+                <input min="1" type="number" name="size" placeholder="size" id="">
+                <input  type="text" name="Location" placeholder="Location" id="">
+            
+                <select name="" id="">
+                    <option value="Owner" >Owner</option>
+                    <option value="Mediator">Mediator</option>
+
+                </select>
+                <input min="0" type="number" name="Mobile" placeholder="Mobile"> 
+                <input  type="text" name="Description" placeholder="Description" id="">
+   <input type="file" name="imageFileInput" id="AddHomeImage" class="choose-img" onchange="getImagePreview(event)">
+
+            <input type="submit" value="Update" class="btn">
+            </div>
+           <h4 style="padding-left: 25rem; padding-top: 1rem;">click below to return </h4>
+            <input value="Return" type="button" class="btn"  onclick="toggleAside('edit-properties')">
+        </form>
+    </section>
+    </aside>
+
+   <!-- control panel -->
+    <aside id="edit-properties-features" >
+       <!-- start setting box -->
+      <div class="setting-box">
+        <div class="toggle-setting">
+            <i class="fa fa-gear"></i>
+        </div>
+            <div class="setting-container">
+                <div class="option-box">
+                  <ul>
+                    <h3 style="background-color: hsl(9, 100%, 62%); color: rgb(0, 0, 0); border-radius: 5px;">click to open or hide</h3><br>
+                    <li><button onclick="toggleSection('edit-prop-info')">Property Information</button></li>
+                    <li><button onclick="toggleSection('Add-or-Delete-Blog')">Add or Delete Blog</button></li>
+                    <li><button onclick="toggleSection('Edit-Website-Contact-Information')">Edit Site Contacts</button></li>
+                    <li><button onclick="toggleSection('View-Reports-or-Messages')">View Reports or Messages</button></li>
+                  </ul>
+                </div>
+            </div>
+      </div>
+      <!-- end setting box -->
+            <!-- control in property features -->
+          
+            <section class="home" id="edit-prop-info" style="display: flex;">
+            
+            <form class="edit-property-Info">
+              <h1>Edit Property Information</h1>
+              <label for="Add-property-type">Add New Property Type</label>
+              <input type="text" id="Add-property-type" name="Add-property-type" placeholder="Add Property Type"><br>
+          
+              <label for="Delete-property-type">Delete Existing Property Type</label>
+              <input type="text" id="Delete-property-type"  name="Delete-property-type" placeholder="Delete Property Type"><br>
+          
+              <input type="submit" value="Update">
+              <input type="reset" value="Reset">
+            </form>
+          </section>
+            
+            <section class="home" id="Add-or-Delete-Blog" style="display: none;">
+              
+            <form class="edit-property-Info">
+              <h1>Add or Delete Blog</h1>
+              <label for="blog-title">Blog Title</label>
+              <input type="text" id="blog-title" name="blog-title"><br>
+          
+              <label for="blog-content">Blog Content</label>
+              <textarea id="blog-content" name="blog-content" cols="100" rows="30" ></textarea><br>
+              <input type="file" name="imageFileInput" id="AddHomeImage" class="choose-img" onchange="getImagePreview(event)">
+              <input type="submit" value="Add">
+              <input type="submit" value="Delete">
+              <input type="reset" value="Reset">
+            </form>
+          </section>
+
+            
+            <section class="home" id="Edit-Website-Contact-Information" style="display: none;">
+            <form class="edit-property-Info">
+              <h1>Edit Website Contact Information</h1>
+              <label for="phone-number">Phone Number</label>
+              <input type="tel" id="phone-number" name="phone-number"><br>
+          
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email"><br>
+          
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address"><br>
+          
+              <input type="submit" value="Update">
+              <input type="reset" value="Reset">
+            </form>
+          </section>
+
+            
+            <section class="home" id="View-Reports-or-Messages" style="display: none;">
+              <div class="recentCustomers">
+              <div class="cardHeader">
+                <h1>View Reports or Messages</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Subject</th>
+                  <th>Message</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Doe</td>
+                  <td>john.doe@example.com</td>
+                  <td>Property Inquiry</td>
+                  <td>I'm interested in the property. Can you send me more details?</td>
+                </tr>
+                <tr>
+                  <td>Jane Doe</td>
+                  <td>jane.doe@example.com</td>
+                  <td>Feedback</td>
+                  <td>Great website! I love the design and user experience.</td>
+                </tr>
+                <tr>
+                  <td>Amit</td>
+                  <td>amit65@example.com</td>
+                  <td>Property Inquiry</td>
+                  <td>I'm interested in the property. Can you send me more details?</td>
+                </tr>
+                <tr>
+                  <td>David</td>
+                  <td>david@example.com</td>
+                  <td>Feedback</td>
+                  <td>Great website! I love the design and user experience.</td>
+                </tr>
+                <tr>
+                  <td>Amit</td>
+                  <td>amit65@example.com</td>
+                  <td>Feedback</td>
+                  <td>I loved this website it's amazing!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </section>
+    </aside>
+   <!-- admin profile  -->
+   <aside id="profile" class="Profile">
+      
+    <div class="profile-information">
+      <h2>Admin Information</h2>
+      <div class="owner-image">
+        <img src="./assets/images/author.jpg" alt="Profile Image">
+      </div>
+      <div class="owner-details">
+        <h5>Account Owner</h5>
+        <h2>Admin Name</h2><hr>
+        <h5>Phone</h5><hr>
+        <h5>Address</h5><hr>
+        <h5>E-mail</h5>
+      </div>
+    </div>
+    <form class="change-prof-info">
+      <h2>Change Profile Information</h2> 
+      
+      <input type="text"  name="username" placeholder="UserName">
+      <label for="image">Image</label>
+      <input type="file" id="image" name="image" accept="image/*;capture=camera" placeholder="Image">
+      <input type="number" min="0" id="phone" name="phone" placeholder="Phone Number">
+      <input type="text" id="address" name="address" placeholder="Address">
+      <input type="email"  name="e-mail" placeholder="E-mail">
+      <button type="submit">Update</button>
+    </form>
+    
+  </aside>
+   <!-- change pass -->
+    <aside id="password-section" class="Profile">
+      <form class="change-pass">
+        <h2>Change Password</h2>
+        <input type="password" id="old-password" name="old-password" placeholder="Current Password" required>
+        <input type="password" id="new-password" name="new-password" placeholder="New Password" required>
+        
+        <input type="password" id="confirm-new-password" name="confirm-new-password" placeholder="Confirm New Password" required>
+        <button type="submit">Save</button>
+      </form>
+    </aside>
+    
+<!-- End setting box -->
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/profile.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

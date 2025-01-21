@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homeverse - Find your dream house</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/profile.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <ul class="header-top-list">
+
+          <li>
+            <a href="mailto:info@homeverse.com" class="header-top-link">
+              <ion-icon name="mail-outline"></ion-icon>
+
+              <span>info@homeverse.com</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="header-top-link">
+              <ion-icon name="location-outline"></ion-icon>
+
+              <address>15/A,Cairo,Egypt</address>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <ul class="header-top-social-list">
+
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+
+          <a href="AddHome.html"><button class="header-top-btn">Add Home</button></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <a href="homeverse.html" class="logo">
+          <img src="./assets/images/logo.png" alt="Homeverse logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <img src="./assets/images/logo.png" alt="Homeverse logo">
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="homeverse.html#home" class="navbar-link" data-nav-link>Home</a>
+              </li>
+
+              <li>
+                <a href="homeverse.html#about" class="navbar-link" data-nav-link>About</a>
+              </li>
+
+              <li>
+                <a href="homeverse.html#service" class="navbar-link" data-nav-link>Service</a>
+              </li>
+
+              <li>
+                <a href="homeverse.html#property" class="navbar-link" data-nav-link>Property</a>
+              </li>
+
+              <li>
+                <a href="homeverse.html#blog" class="navbar-link" data-nav-link>Blog</a>
+              </li>
+
+              <li>
+                <a href="homeverse.html#contact" class="navbar-link" data-nav-link>Contact</a>
+              </li>
+
+              <li>
+                <a href="Buy.html" class="navbar-link" data-nav-link>Buy</a> 
+               </li>
+             
+               <li>
+                 <a href="Rent.html" class="navbar-link" data-nav-link>Rent</a> 
+                </li>
+
+            </ul>
+          </div>
+
+        </nav>
+
+        <div class="header-bottom-actions">
+
+          <button class="header-bottom-actions-btn" aria-label="Search">
+            <ion-icon name="search-outline"></ion-icon>
+
+            <span>Search</span>
+          </button>
+
+          <button class="header-bottom-actions-btn" aria-label="Profile">
+            <ion-icon name="person-outline"></ion-icon>
+
+            <span>Profile</span>
+          </button>
+
+          <button class="header-bottom-actions-btn" aria-label="Cart">
+            <ion-icon name="cart-outline"></ion-icon>
+
+            <span>Cart</span>
+          </button>
+
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+            <span>Menu</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+<!--
+  profile
+-->
+<!-- start setting box -->
+<div class="setting-box">
+  <div class="toggle-setting">
+      <i class="fa fa-gear"></i>
+  </div>
+      <div class="setting-container">
+          <div class="option-box">
+             <ul>
+              <li><button onclick="toggleAside('dashboard')">Dashboard</button></li>
+              <li><button onclick="toggleAside('profile')">Profile</button></li>
+              <li><button onclick="toggleAside('change-acc-info')">Change Profile</button></li>
+              <li><button onclick="toggleAside('address-details')">Address</button></li>
+              <li><button onclick="toggleAside('my-properties')">My Properties</button></li>
+              <li><button onclick="toggleAside('favorited-properties')">Favorited Properties</button></li>
+              <li><a href="AddHome.html"><button>Add Property</button></a></li>
+              <li><button onclick="toggleAside('payments')">Payments</button></li>
+              <li><button onclick="toggleAside('password-section')">Change Password</button></li>
+              <li><a href="homeverse.html"><button>Log out</button></a></li>
+             </ul>
+          </div>
+      </div>
+</div>
+<!-- end setting box -->
+<header class="aside-header">
+      <h1>My Account</h1>
+    </header>
+
+    <aside id="dashboard" class="Profile">
+      <div class="dash">
+        <h2>Hello, User Name</h2>
+        <h3>not your account? <a href="homeverse.html">Log out</a></h3>
+      </div>
+      <div class="dash-content">
+        <p>Profile Details: Users can update their personal information, contact details, and preferences on their profile page.
+
+          New Property: Users can add new properties to their account, providing details such as the address, rental price, and available amenities.
+          
+          Change Password or User Name: Users can change their login credentials on the profile page for security reasons or if they wish to use a different username.
+          
+          Payments: Users can view their payment history and make payments for their properties through the site's payment gateway.
+          
+          Maintenance Requests: Users can submit maintenance requests for their properties, which are then processed by the property management team.
+          
+          Tenant Applications: Property owners can view and manage tenant applications for their properties, including screening tenants and accepting or rejecting applications.
+          
+          Notifications: Users can receive notifications for new messages, property updates, and other important events related to their properties.</p>
+      </div>
+    </aside>
+
+    <aside id="profile" class="Profile">
+      
+      <div class="profile-information">
+        <h2>Profile Information</h2>
+        <div class="owner-image">
+          <img src="./assets/images/author.jpg" alt="Profile Image">
+        </div>
+        <div class="owner-details">
+          <h5>Account Owner</h5>
+          <h2>User Name</h2><hr>
+          <h5>Phone</h5><hr>
+          <h5>Address</h5><hr>
+          <h5>E-mail</h5>
+        </div>
+      </div>
+      
+      
+    </aside>
+
+
+    <aside id="change-acc-info" class="Profile">
+      <form class="change-prof-info">
+        <h2>Change Profile Information</h2> 
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name">
+        <label for="image">Image</label>
+        <input type="file" id="image" name="image" accept="image/*;capture=camera">
+        <label for="phone">Phone</label>
+        <input type="number" min="0" id="phone" name="phone">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address">
+        <label for="e-mail">E-mail</label>
+        <input type="email" id="e-mail" name="e-mail">
+        <button type="submit">Save</button>
+      </form>
+    </aside>
+    <aside id="address-details" class="Profile">
+      <div class="address-det">
+        <h2>Address</h2>
+        <h3>country</h3>
+        <h4>city</h4>
+        <h5>phone</h5>
+        <p>address</p>
+      </div>
+      <form class="change-pass">
+        <h2>Change Address</h2>
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" required>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required>
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+        <button type="submit">Save</button>
+      </form>
+    </aside>
+
+    <aside id="my-properties" class="Profile">
+      <div class="my-prop-main">
+        <span class="my-prop-span"><h2>My Properties</h2></span>
+        <span class="property-date"><h4>Date</h4></span>
+        <span><h4>Actions</h4></span>
+        <span><h4>Delete</h4></span>
+        <div class="my-prop">
+          
+          <div class="property-image">
+            <img src="./assets/images/property-1.jpg" alt="property image">
+          </div>
+          <div class="property-details">
+            <h3>Property-name</h3><hr>
+            <h5>Address</h5><hr>
+            <h5>Phone</h5><hr>
+          </div>
+          <div class="date-act-del">
+            <div id="date-added" class="prop-date-details"></div>
+            <button >Edit</button>
+            <div class="delete-button">
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+        </div>
+    <hr>
+    <div class="my-prop">
+          
+      <div class="property-image">
+        <img src="./assets/images/property-2.jpg" alt="property image">
+      </div>
+      <div class="property-details">
+        <h3>Property-name</h3><hr>
+        <h5>Address</h5><hr>
+        <h5>Phone</h5><hr>
+      </div>
+      <div class="date-act-del">
+        <div id="date-added1" class="prop-date-details"></div>
+        <button >Edit</button>
+        <div class="delete-button">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+    </aside>
+    <aside id="favorited-properties" class="Profile">
+      <div class="my-prop-main">
+        <span class="my-prop-span"><h2>My Properties</h2></span>
+        <span class="property-date"><h4>Date</h4></span>
+        <span><h4>Actions</h4></span>
+        <span><h4>Delete</h4></span>
+        <div class="my-prop">
+          
+          <div class="property-image">
+            <img src="./assets/images/property-3.jpg" alt="property image">
+          </div>
+          <div class="property-details">
+            <h3>Property-name</h3><hr>
+            <h5>Address</h5><hr>
+            <h5>Phone</h5><hr>
+          </div>
+          <div class="date-act-del">
+            <div id="date-added2" class="prop-date-details"></div>
+            <button >Edit</button>
+            <div class="delete-button">
+              <i class="fa fa-trash"></i>
+            </div>
+          </div>
+        </div>
+    <hr>
+    <div class="my-prop">
+          
+      <div class="property-image">
+        <img src="./assets/images/property-4.png" alt="property image">
+      </div>
+      <div class="property-details">
+        <h3>Property-name</h3><hr>
+        <h5>Address</h5><hr>
+        <h5>Phone</h5><hr>
+      </div>
+      <div class="date-act-del">
+        <div id="date-added3" class="prop-date-details"></div>
+        <button >Edit</button>
+        <div class="delete-button">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+    </aside>
+    <aside id="payments" class="Profile">
+      <h2>Payments</h2>
+      <div class="pay-coupon">
+        <h3>Are you have a coupon?</h3>
+        <button onclick="toggleAside('coupon')">Click here to enter your code</button>
+        
+      </div>
+      <form class="pay">
+        <h3>Billing Details</h3> 
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name">
+        <label for="e-mail">E-mail</label>
+        <input type="email" id="e-mail" name="e-mail">
+        <label for="phone">Phone</label>
+        <input type="number" min="0" id="phone" name="phone">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address">
+    
+        <button type="submit">Save</button>
+      </form>
+      <div class="pay-method">
+        <h3>Billing Methods</h3>
+        <input type="radio" id="method-1" name="method" onclick="uncheckRadios(this)">
+        <label for="method-1">Cash on delivery</label>
+        <input type="radio" id="method-2" name="method" onclick="uncheckRadios(this)">
+        <label for="method-2">Personal Bank Account</label>
+        <input type="radio" id="method-3" name="method" onclick="uncheckRadios(this)">
+        <label for="method-3">PayPal</label>
+      </div>
+      <div class="pay-method">
+        <h3>Cart totals</h3>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <h3>order total</h3>
+      </div>
+    </aside>
+    <aside id="coupon" class="Profile">
+      <div class="pay">
+        <h2>Enter your code</h2>
+        <input type="text" required name="Coupon">
+        <button type="submit">Send</button>
+        <button type="submit" onclick="toggleAside('payments')">Return</button>
+      </div>
+    </aside>
+    <aside id="password-section" class="Profile">
+      <form class="change-pass">
+        <h2>Change Password</h2>
+        <label for="old-password">Current Password</label>
+        <input type="password" id="old-password" name="old-password" required>
+        <label for="new-password">New Password</label>
+        <input type="password" id="new-password" name="new-password" required>
+        <label for="confirm-new-password">Confirm New Password</label>
+        <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+        <button type="submit">Save</button>
+      </form>
+    </aside>
+    
+<!-- End setting box -->
+ <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.png" alt="Homeverse logo">
+          </a>
+
+          <p class="section-text">
+            Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.
+          </p>
+
+          <ul class="contact-list">
+
+            <li>
+              <a href="#" class="contact-link">
+                <ion-icon name="location-outline"></ion-icon>
+
+                <address>15/A,Cairo,Egypt</address>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+0123456789" class="contact-link">
+                <ion-icon name="call-outline"></ion-icon>
+
+                <span>+01114751979</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:contact@homeverse.com" class="contact-link">
+                <ion-icon name="mail-outline"></ion-icon>
+
+                <span>contact@homeverse.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">About</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">All Products</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Locations Map</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Services</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Order tracking</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Wish List</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms & Conditions</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Promotional Offers</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Customer Care</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Wish List</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Order tracking</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2023 <a href="#">Homeverse</a>. All Rights Reserved
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/profile.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

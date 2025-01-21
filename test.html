@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Description" content="i practice to learn">
+        <meta name="viewport" content="device-width, initial-scale=1.0">
+        <title>Testing Page</title>
+        <script>
+            function myFun(){
+                var x = document.getElementById("fname");
+                x.value = x.value.toUppercase();
+            }
+        </script>
+    </head>
+    <body>
+        <h2>This JS function will capitalize your name</h2>
+        <p>Enter Your Name: <input type="text" id="fname" onchange="myFun()"></p>
+        <p> tfsdfchgsvcgv. &nbsp;&nbsp;&nbsp; smdbfjhdsgfhsgd.</p>
+    </body>
+</html>
+
+<!-- edit property features -->
+<section class="home" id="home">
+        
+    <form action="StoreProperty" method="post" class="add-form" enctype="multipart/form-data">
+      
+        <h3>Edit Property Features</h3> 
+
+
+
+        <div class="inputBox">
+            <select name="" id="">
+                <option value="" disabled hidden selected>Sell or Rent 
+                </option>
+                <option >For Rent</option>
+                 <option >For Sell</option>
+            </select>
+                
+    <select name="PType" id="type">
+     <option value="" disabled hidden selected>Type 
+                </option>
+        @foreach ($PropertyType as $type)
+        <option name ="Type" value="{{$type->Type_ID}}">{{$type->Type_name}}</option>
+    @endforeach
+    </select>
+            <input min="1" type="number" name="Price" placeholder="Price" id="">
+            <input min="1" type="number" name="Bedrooms" placeholder="Bedrooms" id="">
+
+            <input min="1" type="number" name="Bathrooms" placeholder="Bathrooms" id="">
+            <input min="1" type="number" name="size" placeholder="size" id="">
+            <input  type="text" name="Location" placeholder="Location" id="">
+        
+            <select name="" id="">
+                <option value="Owner" >Owner</option>
+                <option value="Mediator">Mediator</option>
+
+            </select>
+            <input min="0" type="number" name="Mobile" placeholder="Mobile"> 
+            <input  type="text" name="Description" placeholder="Description" id="">
+<input type="file" name="imageFileInput" id="AddHomeImage" class="choose-img" onchange="getImagePreview(event)">
+
+        <input type="submit" value="Update" class="btn">
+        </div>
+       
+
+    </form>
+    
+</section>
